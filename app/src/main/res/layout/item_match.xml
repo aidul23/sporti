@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/matchCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#dfF3dffg"
+                android:textSize="22sp"
+                android:textColor="@color/contentTextColor"/>
+
+            <TextView
+                android:id="@+id/teamName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tampere Titan"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_date"/>
+
+                <TextView
+                    android:id="@+id/matchDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 September, 2023"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/contentTextColor"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_time"/>
+
+            <TextView
+                android:id="@+id/matchTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8.30 pm - 9.30 pm"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/contentTextColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_location"/>
+
+            <TextView
+                android:id="@+id/matchLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tamperen Mesekeskus"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/contentTextColor"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

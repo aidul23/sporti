@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Team Management</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="printType">
+        <item>Normal Paper B&amp;W</item>
+        <item>Normal Paper Color</item>
+        <item>Offset Paper B&amp;W</item>
+        <item>Offset Paper Color</item>
+    </string-array>
+
+    <string-array name="shopName">
+        <item>Stationary Shop 1</item>
+        <item>Stationary Shop 2</item>
+        <item>Stationary Shop 3</item>
+        <item>Stationary Shop 4</item>
+    </string-array>
+
+    <string-array name="playerPosition">
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>ETE</item>
+        <item>CCE</item>
+        <item>CE</item>
+        <item>Pharmacy</item>
+        <item>BBA</item>
+        <item>EB</item>
+        <item>ELL</item>
+        <item>LLB</item>
+        <item>QSIS</item>
+        <item>DIS</item>
+        <item>SHIS</item>
+    </string-array>
+</resources>
