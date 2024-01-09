@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -15,20 +16,31 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.duodevloopers.teammanagement.R;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class MatchCreateDialog extends AppCompatDialogFragment {
     private EditText teamName;
     private Button datePicker, timePicker;
 
     private TextView date, time;
+
+    LocalDate currentDate = LocalDate.now();
+
+    // Get the current year, month, and day
+    int curYear = currentDate.getYear();
+    int curMonth = currentDate.getMonthValue();
+    int curDay = currentDate.getDayOfMonth();
     @SuppressLint("MissingInflatedId")
     @NonNull
     @Override
@@ -46,7 +58,7 @@ public class MatchCreateDialog extends AppCompatDialogFragment {
 
                     }
                 })
-                .setPositiveButton("create", new DialogInterface.OnClickListener() {
+                .setPositiveButton("play!", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -59,6 +71,7 @@ public class MatchCreateDialog extends AppCompatDialogFragment {
         time = view.findViewById(R.id.tvTime);
 
         datePicker.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
                 final Calendar c = Calendar.getInstance();
@@ -70,10 +83,13 @@ public class MatchCreateDialog extends AppCompatDialogFragment {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
+
                         date.setText(dayOfMonth+" "+getMonth(monthOfYear)+", "+year);
                         date.setVisibility(View.VISIBLE);
                     }
                 },year,month,day);
+
+                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
 
                 datePickerDialog.show();
             }

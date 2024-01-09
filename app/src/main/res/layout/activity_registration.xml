@@ -92,6 +92,17 @@
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputTeam"
+                        style="@style/parent">
+
+                        <EditText
+                            android:id="@+id/editTextTeam"
+                            style="@style/modifiedEditText"
+                            android:hint="Team Name"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputAge"
@@ -116,6 +127,34 @@
                             android:inputType="text"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Register a player or manager?"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rbPlayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Player"/>
+                        <RadioButton
+                            android:id="@+id/rbManager"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Manager"/>
+                    </RadioGroup>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -236,7 +275,7 @@
                         android:id="@+id/cirRegisterButton"
                         style="@style/loginButton"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="16dp"
                         android:text="Register"
                         />
 

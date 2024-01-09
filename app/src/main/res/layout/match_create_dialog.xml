@@ -51,6 +51,32 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEstimatedPlayer"
+            style="@style/parent"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/editTextEstimatedPlayer"
+                style="@style/modifiedEditText"
+                android:hint="Estimated Player Limit"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputFieldRent"
+            style="@style/parent"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/editTextFieldRent"
+                style="@style/modifiedEditText"
+                android:hint="Field Rent"
+                android:inputType="number"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputAddress"
             style="@style/parent"
             android:layout_marginTop="8dp">
@@ -87,7 +113,7 @@
             android:id="@+id/relativeTimeDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="16dp">
             <Button
                 android:id="@+id/buttonDatePicker"
                 android:layout_width="wrap_content"
